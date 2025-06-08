@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppPerfecta - Desarrollo Web Profesional en Panamá y España | Sitios Web para Empresas</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Desarrollo web profesional en Panamá y España. Sitios web para empresas con dominio gratis, SSL, SEO optimizado y diseño responsive. Especialistas en desarrollo web empresarial.">
+    <meta name="keywords" content="desarrollo web panamá, desarrollo web españa, sitios web empresas, diseño web panamá, diseño web españa, desarrollo web profesional, páginas web panamá, páginas web españa">
+    <meta name="author" content="AppPerfecta">
+    
+    <!-- Geographic Meta Tags - Panamá -->
+    <meta name="geo.region" content="PA">
+    <meta name="geo.placename" content="Panamá">
+    <meta name="geo.position" content="8.9824;-79.5199">
+    <meta name="ICBM" content="8.9824, -79.5199">
+    
+    <!-- Geographic Meta Tags - España -->
+    <meta name="geo.region" content="ES">
+    <meta name="geo.placename" content="España">
+    <meta name="geo.position" content="40.4168;-3.7038">
+    <meta name="ICBM" content="40.4168, -3.7038">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="AppPerfecta - Desarrollo Web Profesional en Panamá y España">
+    <meta property="og:description" content="Sitios web profesionales para empresas con dominio gratis, SSL y optimización SEO. Tu presencia digital perfecta.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://appperfecta.com">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:locale:alternate" content="es_PA">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AppPerfecta - Desarrollo Web Profesional">
+    <meta name="twitter:description" content="Sitios web empresariales con tecnología de vanguardia y soporte completo en Panamá y España.">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "AppPerfecta",
+        "url": "https://appperfecta.com",
+        "logo": "https://appperfecta.com/logo.png",
+        "contactPoint": [
+            {
+                "@type": "ContactPoint",
+                "telephone": "+507-0000-0000",
+                "contactType": "customer service",
+                "areaServed": "PA",
+                "availableLanguage": "Spanish"
+            },
+            {
+                "@type": "ContactPoint",
+                "telephone": "+34-000-000-000",
+                "contactType": "customer service",
+                "areaServed": "ES",
+                "availableLanguage": ["Spanish", "English"]
+            }
+        ],
+        "address": [
+            {
+                "@type": "PostalAddress",
+                "addressCountry": "PA",
+                "addressLocality": "Panamá"
+            },
+            {
+                "@type": "PostalAddress",
+                "addressCountry": "ES",
+                "addressLocality": "Madrid"
+            }
+        ],
+        "sameAs": [
+            "https://www.facebook.com/appperfecta",
+            "https://www.instagram.com/appperfecta"
+        ]
+    }
+    </script>
+    
+    <link rel="canonical" href="https://appperfecta.com">
+    <link rel="alternate" href="https://appperfecta.com/es" hreflang="es-ES">
+    <link rel="alternate" href="https://appperfecta.com/pa" hreflang="es-PA">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #0066CC;
+            --secondary-color: #0052A3;
+            --accent-color: #FF6B35;
+            --success-color: #10B981;
+            --warning-color: #F59E0B;
+            --error-color: #EF4444;
+            --text-dark: #1F2937;
+            --text-light: #6B7280;
+            --bg-light: #F8FAFC;
+            --white: #FFFFFF;
+            --gray-100: #F1F5F9;
+            --gray-200: #E2E8F0;
+            --gray-800: #1E293B;
+            --gray-900: #0F172A;
+            --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            --gradient-accent: linear-gradient(135deg, var(--accent-color) 0%, #FF8A65 100%);
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        
+        /* Custom Bootstrap Overrides */
+        .btn-primary {
+            background: var(--gradient-primary);
+            border: none;
+            border-radius: 50px;
+            padding: 12px 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .btn-outline-light {
+            border: 2px solid var(--white);
+            color: var(--white);
+            border-radius: 50px;
+            padding: 12px 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline-light:hover {
+            background: var(--white);
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+        
+        /* Header Styles */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--gray-200);
+            transition: all 0.3s ease;
+            padding: 1rem 0;
+        }
+        
+        .navbar.scrolled {
+            background: var(--white) !important;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .navbar-brand {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--primary-color) !important;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .navbar-nav .nav-link {
+            color: var(--text-dark) !important;
+            font-weight: 500;
+            margin: 0 0.5rem;
+            padding: 0.5rem 1rem !important;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .navbar-nav .nav-link:hover {
+            color: var(--primary-color) !important;
+            background: var(--gray-100);
+        }
+        
+        .navbar-nav .nav-link.active {
+            color: var(--primary-color) !important;
+            background: var(--gray-100);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>') center/cover;
+            opacity: 0.1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 600px;
+        }
+        
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .floating-element {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-element:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+        
+        .floating-element:nth-child(2) {
+            width: 120px;
+            height: 120px;
+            top: 60%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+        
+        .floating-element:nth-child(3) {
+            width: 60px;
+            height: 60px;
+            top: 40%;
+            left: 80%;
+            animation-delay: 4s;
+        }
+        
+        /* Feature Cards */
+        .feature-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            border: 1px solid var(--gray-100);
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+            font-size: 2rem;
+            position: relative;
+        }
+        
+        .feature-icon::after {
+            content: '';
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 20px;
+            height: 20px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover .feature-icon::after {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        /* Pricing Cards */
+        .pricing-card {
+            background: var(--white);
+            border: 2px solid var(--gray-200);
+            border-radius: 24px;
+            padding: 3rem 2rem;
+            text-align: center;
+            position: relative;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary-color);
+        }
+        
+        .pricing-card.featured {
+            background: var(--gradient-primary);
+            color: var(--white);
+            border-color: var(--primary-color);
+            transform: scale(1.05);
+            position: relative;
+        }
+        
+        .pricing-card.featured::before {
+            content: 'Más Popular';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 8px 24px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+        
+        .plan-price {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin: 1rem 0;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .pricing-card.featured .plan-price {
+            color: var(--white);
+            -webkit-text-fill-color: var(--white);
+        }
+        
+        .plan-features {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+        
+        .plan-features li {
+            padding: 0.75rem 0;
+            position: relative;
+            padding-left: 2rem;
+            border-bottom: 1px solid var(--gray-100);
+        }
+        
+        .plan-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .plan-features li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+            font-size: 0.875rem;
+        }
+        
+        .pricing-card.featured .plan-features li::before {
+            color: var(--white);
+        }
+        
+        .pricing-card.featured .plan-features li {
+            border-bottom-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Testimonials */
+        .testimonial-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            position: relative;
+            margin: 2rem 0;
+        }
+        
+        .testimonial-card::before {
+            content: '\f10d';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient-primary);
+            color: var(--white);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        
+        .testimonial-text {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            font-style: italic;
+            color: var(--text-light);
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+        
+        /* Contact Form */
+        .contact-form {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--gray-100);
+        }
+        
+        .form-control {
+            border: 2px solid var(--gray-200);
+            border-radius: 12px;
+            padding: 12px 16px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.2rem rgba(0, 102, 204, 0.25);
+        }
+        
+        .form-label {
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Contact Info Cards */
+        .contact-info-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            border: 1px solid var(--gray-100);
+            height: 100%;
+        }
+        
+        .contact-info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            margin: 0 auto 1rem;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--gray-900);
+            color: var(--white);
+            padding: 4rem 0 2rem;
+            position: relative;
+        }
+        
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: var(--gradient-primary);
+        }
+        
+        .footer h5 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+        
+        .footer a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer a:hover {
+            color: var(--white);
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            background: var(--gradient-primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            margin-bottom: 0;
+            padding: 0;
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+            padding: 0;
+        }
+        
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            text-decoration: none;
+            box-shadow: var(--shadow-xl);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            color: var(--white);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+        }
+        
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Utility Classes */
+        .gradient-text {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .section-padding {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 100px 0 60px;
+                min-height: 80vh;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-padding {
+                padding: 3rem 0;
+            }
+            
+            .pricing-card.featured {
+                transform: none;
+                margin-bottom: 2rem;
+            }
+            
+            .pricing-card.featured:hover {
+                transform: translateY(-10px);
+            }
+            
+            .contact-form {
+                padding: 2rem;
+            }
+            
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                font-size: 1.25rem;
+            }
+        }
+        
+        /* Loading Animation */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid var(--gray-200);
+            border-top: 3px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .loading-overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#inicio">
+                <i class="fas fa-rocket"></i>
+                AppPerfecta
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#precios">Precios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonios">Testimonios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="floating-elements">
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+        </div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content" data-aos="fade-up">
+                        <h1>Desarrollamos Sitios Web que <span class="text-warning">Impulsan</span> tu Negocio</h1>
+                        <p class="lead">Soluciones web profesionales para empresas en Panamá y España. Diseño moderno, tecnología avanzada y resultados garantizados.</p>
+                        <div class="d-flex flex-wrap gap-3 mt-4">
+                            <a href="#precios" class="btn btn-primary btn-lg">
+                                <i class="fas fa-briefcase me-2"></i>Ver Paquetes
+                            </a>
+                            <a href="https://wa.me/34600000000?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20sus%20servicios%20de%20desarrollo%20web" class="btn btn-outline-light btn-lg">
+                                <i class="fab fa-whatsapp me-2"></i>Consulta Gratis
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+                    <div class="text-center">
+                        <i class="fas fa-laptop-code" style="font-size: 15rem; opacity: 0.1;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section-padding bg-light" id="servicios">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">¿Por Qué Elegir <span class="gradient-text">AppPerfecta</span>?</h2>
+                <p class="section-subtitle">Ofrecemos soluciones completas de desarrollo web con tecnología de vanguardia y soporte personalizado</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h4>Dominio Gratis por 1 Año</h4>
+                        <p>Tu nombre de dominio profesional incluido sin costo adicional durante el primer año de servicio.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Seguridad Completa</h4>
+                        <p>Certificado SSL, cortafuegos avanzado, protección anti-bots y sistemas de seguridad multicapa.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h4>Diseño Personalizado</h4>
+                        <p>Sitios web únicos adaptados completamente a tu marca, industria y objetivos comerciales.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4>Email Profesional</h4>
+                        <p>Cuentas de correo corporativo con tu dominio para proyectar profesionalismo en cada comunicación.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h4>Optimización SEO</h4>
+                        <p>Posicionamiento en buscadores desde el primer día con técnicas avanzadas de SEO local e internacional.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4>Diseño Responsive</h4>
+                        <p>Experiencia perfecta en todos los dispositivos: móviles, tablets y computadoras de escritorio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section-padding" id="precios">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Planes Diseñados para tu <span class="gradient-text">Éxito</span></h2>
+                <p class="section-subtitle">Elige el paquete perfecto para tu empresa. Sin sorpresas, sin costos ocultos.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pricing-card">
+                        <h3 class="h4 mb-3">Básico</h3>
+                        <div class="plan-price">$80</div>
+                        <p class="text-muted">Pago único + Dominio anual + 10/mes Hosting</p>
+                        <ul class="plan-features">
+                            <li>Sitio web landing page</li>
+                            <li>Diseño responsive</li>
+                            <li>Dominio gratis por 1 año</li>
+                            <li>Certificado SSL incluido</li>
+                            <li>1 cuenta de email profesional</li>
+                            <li>SEO básico</li>
+                            <li>Backup automático diario</li>
+                            <li>Formulario de contacto</li>
+                            <li>Soporte por email</li>
+                        </ul>
+                        <a href="https://wa.me/34600000000?text=Hola,%20me%20interesa%20el%20plan%20Básico%20de%20$80" class="btn btn-outline-primary w-100">Elegir Plan Básico</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pricing-card featured">
+                        <h3 class="h4 mb-3">Profesional</h3>
+                        <div class="plan-price">$150</div>
+                        <p class="opacity-75">Pago único + Dominio anual + 15/mes Hosting</p>
+                        <ul class="plan-features">
+                            <li>Sitio web de hasta 3 páginas</li>
+                            <li>Diseño completamente personalizado</li>
+                            <li>Dominio gratis por 1 año</li>
+                            <li>Certificado SSL avanzado</li>
+                            <li>3 cuentas de email profesional</li>
+                            <li>SEO avanzado</li>
+                            <li>Backup automático diario</li>
+                            <li>Galería de imágenes</li>
+                            <li>Soporte prioritario 24/7</li>
+                        </ul>
+                        <a href="https://wa.me/34600000000?text=Hola,%20me%20interesa%20el%20plan%20Profesional%20de%20$150" class="btn btn-light w-100">Elegir Plan Profesional</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="pricing-card">
+                        <h3 class="h4 mb-3">Empresarial</h3>
+                        <div class="plan-price">$200</div>
+                        <p class="text-muted">Pago único + Dominio anual + 20/mes Hosting</p>
+                        <ul class="plan-features">
+                            <li>Sitio web de hasta 6 páginas</li>
+                            <li>Diseño premium personalizado</li>
+                            <li>Dominio gratis por 1 año</li>
+                            <li>Seguridad empresarial completa</li>
+                            <li>5 cuentas de email profesional</li>
+                            <li>SEO internacional</li>
+                            <li>E-commerce básico</li>
+                            <li>Panel de administración</li>
+                            <li>Integración con redes sociales</li>
+                            <li>Base de datos PostgreSQL</li>
+                            <li>Backup automático diario</li>
+                            <li>Soporte VIP personalizado</li>
+                        </ul>
+                        <a href="https://wa.me/34600000000?text=Hola,%20me%20interesa%20el%20plan%20Empresarial%20de%20$200" class="btn btn-outline-primary w-100">Elegir Plan Empresarial</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section-padding bg-light" id="testimonios">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Lo Que Dicen Nuestros <span class="gradient-text">Clientes</span></h2>
+                <p class="section-subtitle">Más de 100 empresas confían en nosotros para su presencia digital</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-aos="fade-up">
+                                <div class="testimonial-card">
+                                    <p class="testimonial-text">"AppPerfecta transformó completamente nuestra presencia online. El sitio web que desarrollaron superó todas nuestras expectativas y hemos visto un aumento del 300% en consultas desde el lanzamiento."</p>
+                                    <div class="testimonial-author">
+                                        <div class="author-avatar">MS</div>
+                                        <div>
+                                            <h5 class="mb-1">María Sandoval</h5>
+                                            <p class="text-muted mb-0">Directora, Constructora Sandoval</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-aos="fade-up">
+                                <div class="testimonial-card">
+                                    <p class="testimonial-text">"El equipo de AppPerfecta es excepcional. No solo entregaron un sitio web espectacular, sino que también nos capacitaron para mantenerlo actualizado. Su soporte es inmejorable."</p>
+                                    <div class="testimonial-author">
+                                        <div class="author-avatar">JR</div>
+                                        <div>
+                                            <h5 class="mb-1">Javier Rodríguez</h5>
+                                            <p class="text-muted mb-0">CEO, Consultoría Legal JR</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-aos="fade-up">
+                                <div class="testimonial-card">
+                                    <p class="testimonial-text">"Desde que lanzamos nuestro nuevo sitio web, nuestras ventas online se triplicaron. La inversión se pagó sola en menos de 3 meses. Altamente recomendados."</p>
+                                    <div class="testimonial-author">
+                                        <div class="author-avatar">AC</div>
+                                        <div>
+                                            <h5 class="mb-1">Ana Castillo</h5>
+                                            <p class="text-muted mb-0">Propietaria, Boutique Ana</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-padding" id="contacto">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">¿Listo para Impulsar tu <span class="gradient-text">Negocio</span>?</h2>
+                <p class="section-subtitle">Contáctanos hoy y recibe una consulta gratuita personalizada</p>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="row g-4">
+                        <div class="col-12" data-aos="fade-right" data-aos-delay="100">
+                            <div class="contact-info-card">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <h5>Teléfono</h5>
+                                <p class="text-muted">España: +34 600 000 000</p>
+                                <p class="text-muted">Panamá: +507 0000-0000</p>
+                            </div>
+                        </div>
+                        <div class="col-12" data-aos="fade-right" data-aos-delay="200">
+                            <div class="contact-info-card">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <h5>Email</h5>
+                                <p class="text-muted">info@appperfecta.com</p>
+                            </div>
+                        </div>
+                        <div class="col-12" data-aos="fade-right" data-aos-delay="300">
+                            <div class="contact-info-card">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <h5>Ubicación</h5>
+                                <p class="text-muted">Madrid, España</p>
+                                <p class="text-muted">Ciudad de Panamá, Panamá</p>
+                            </div>
+                        </div>
+                        <div class="col-12" data-aos="fade-right" data-aos-delay="400">
+                            <div class="contact-info-card">
+                                <div class="contact-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <h5>Horario</h5>
+                                <p class="text-muted">Lun - Vie: 8:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8" data-aos="fade-left">
+                    <div class="contact-form">
+                        <h3 class="mb-4">Hablemos de tu Proyecto</h3>
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label">Nombre Completo</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label">Teléfono</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="company" class="form-label">Empresa</label>
+                                    <input type="text" class="form-control" id="company" name="company">
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Mensaje</label>
+                                    <textarea class="form-control" id="message" name="message" rows="5" placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-lg w-100">
+                                        <i class="fas fa-paper-plane me-2"></i>Enviar Consulta
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <h5>AppPerfecta</h5>
+                    <p class="mb-4">Desarrollamos sitios web profesionales que impulsan el crecimiento de tu negocio en España y Panamá.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <h5>Servicios</h5>
+                    <a href="#servicios">Desarrollo Web</a>
+                    <a href="#servicios">Diseño Responsive</a>
+                    <a href="#servicios">Optimización SEO</a>
+                    <a href="#servicios">Hosting Profesional</a>
+                    <a href="#servicios">Mantenimiento</a>
+                </div>
+                <div class="col-lg-2 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <h5>Empresa</h5>
+                    <a href="#inicio">Sobre Nosotros</a>
+                    <a href="#testimonios">Testimonios</a>
+                    <a href="#precios">Precios</a>
+                    <a href="#contacto">Contacto</a>
+                    <a href="#">Blog</a>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <h5>Contacto</h5>
+                    <p><i class="fas fa-phone me-2"></i>España: +34 600 000 000</p>
+                    <p><i class="fas fa-phone me-2"></i>Panamá: +507 0000-0000</p>
+                    <p><i class="fas fa-envelope me-2"></i>info@appperfecta.com</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Madrid, España y Ciudad de Panamá, Panamá</p>
+                </div>
+            </div>
+            <hr class="my-4" style="border-color: rgba(255,255,255,0.1);">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 AppPerfecta. Todos los derechos reservados. | Desarrollado con <i class="fas fa-heart text-danger"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/34600000000?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20sus%20servicios%20de%20desarrollo%20web" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+
+        // Loading overlay
+        window.addEventListener('load', function() {
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            setTimeout(() => {
+                loadingOverlay.classList.add('hidden');
+            }, 1000);
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Active nav link highlighting
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const phone = formData.get('phone') || 'No proporcionado';
+            const company = formData.get('company') || 'No especificada';
+            const message = formData.get('message');
+            
+            // Create WhatsApp message
+            const whatsappMessage = `Hola, soy ${name} de ${company}.
+
+📧 Email: ${email}
+📞 Teléfono: ${phone}
+
+💬 Mensaje: ${message}
+
+Me interesa conocer más sobre sus servicios de desarrollo web.`;
+            
+            const whatsappURL = `https://wa.me/34600000000?text=${encodeURIComponent(whatsappMessage)}`;
+            
+            // Open WhatsApp
+            window.open(whatsappURL, '_blank');
+            
+            // Reset form
+            this.reset();
+            
+            // Show success message
+            const alert = document.createElement('div');
+            alert.className = 'alert alert-success alert-dismissible fade show mt-3';
+            alert.innerHTML = `
+                <i class="fas fa-check-circle me-2"></i>
+                ¡Gracias por tu mensaje! Te contactaremos pronto.
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            `;
+            this.appendChild(alert);
+            
+            setTimeout(() => {
+                if (alert.parentNode) {
+                    alert.remove();
+                }
+            }, 5000);
+        });
+
+        // Parallax effect for hero section
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            const rate = scrolled * -0.5;
+            
+            if (hero) {
+                hero.style.transform = `translateY(${rate}px)`;
+            }
+        });
+
+        // Add ripple effect to buttons
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                ripple.classList.add('ripple');
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+
+        // Auto-close mobile menu when clicking on links
+        document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                const navbarCollapse = document.querySelector('.navbar-collapse');
+                if (navbarCollapse.classList.contains('show')) {
+                    const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+                    bsCollapse.hide();
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        // Observe animated elements
+        document.querySelectorAll('[data-aos]').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add custom CSS for ripple effect
+        const style = document.createElement('style');
+        style.textContent = `
+            .btn {
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .ripple {
+                position: absolute;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.6);
+                transform: scale(0);
+                animation: ripple-animation 0.6s linear;
+                pointer-events: none;
+            }
+            
+            @keyframes ripple-animation {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Performance optimization: Lazy load images
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+
+        // Add scroll-to-top functionality
+        const scrollToTopBtn = document.createElement('button');
+        scrollToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+        scrollToTopBtn.className = 'btn btn-primary position-fixed';
+        scrollToTopBtn.style.cssText = `
+            bottom: 100px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: none;
+            z-index: 999;
+            box-shadow: var(--shadow-lg);
+        `;
+        
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        document.body.appendChild(scrollToTopBtn);
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.style.display = 'block';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+        });
+
+        // Initialize tooltips
+        const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+
+        console.log('🚀 AppPerfecta - Sitio web cargado exitosamente!');
+    </script>
+</body>
+</html>
